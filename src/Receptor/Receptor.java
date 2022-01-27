@@ -30,7 +30,7 @@ public class Receptor {
             DatagramSocket sSocket = new DatagramSocket(port);
             while (true) {
                 // Espacio para los mensajes
-                byte[] cadenaRecibida = new byte[20];
+                byte[] cadenaRecibida = new byte[100];
                 DatagramPacket paquete = new DatagramPacket(cadenaRecibida, cadenaRecibida.length);
                 System.out.println("Esperando mensaje");
                 sSocket.receive(paquete);
